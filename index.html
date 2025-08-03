@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Rakesh Raja R</title>
+    <style>
+      .navbar {
+        background-color: #71C9CE !important;
+      }
+      .display-5 {
+        color: #71c9ce !important;
+      }
+      /* Added hover effect for project cards */
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .footer-link {
+        color: white !important;
+      }
+      .footer-link:hover {
+        color: #e3fdfd !important;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="header">
+      <nav class="navbar navbar-expand-lg">
+        <div
+          class="w-100 d-flex align-items-center justify-content-between px-3"
+        >
+          <div class="d-flex align-items-center">
+            <a class="navbar-brand ms-2" href="#">My Website</a>
+          </div>
+          <div class="d-flex">
+            <a class="nav-link btn btn-light ms-2 p-2" href="#hero">About</a>
+            <a class="nav-link btn btn-light ms-2 p-2" href="#Skills">Skills</a>
+            <a class="nav-link btn btn-light ms-2 p-2" href="#projects">Projects</a>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section id="intro">
+      <div class="type-container">
+        <h1 class="line1 lilita-one-regular">Rakesh Raja R</h1>
+        <h1 class="line2 lilita-one-regular">A Web developer...</h1>
+      </div>
+    </section>
+    <section id="hero">
+      <div class="px-4 py-5 my-5 text-center">
+        <img src="./images/rakesh.jpeg" class="rounded-circle" alt="..." />
+        <h1 class="display-5 fw-bold text-body-emphasis mt-5">Hello.</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4 mt-4 mx-3.5">
+            Hi, I'm Rakesh Raja — a passionate web developer who specializes in
+            building fast, responsive, and user-friendly websites. I love
+            turning ideas into clean, functional digital experiences with a
+            focus on performance, simplicity, and modern design. Whether it’s
+            developing interactive front-end interfaces or optimizing user
+            journeys, I’m dedicated to creating impactful web solutions that
+            stand out. Let’s connect and build something great together!
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="Skills" style="background-color: #E3FDFD">
+      <div class="container px-4 py-5">
+        <h2 class="pb-2 border-bottom">My Skills</h2>
+        <div
+          class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5"
+        >
+          <div class="col d-flex flex-column align-items-start gap-2">
+            <h2 class="fw-bold text-body-emphasis">Things I’m Good At</h2>
+            <p class="text-body-secondary">
+              I have a strong foundation in front-end development, with
+              expertise in HTML, CSS, JavaScript, and modern frameworks like
+              React and Tailwind CSS. I'm experienced in building responsive,
+              mobile-first websites that offer seamless user experiences across
+              devices. I also work with version control tools like Git and
+              GitHub, and I have basic knowledge of back-end technologies like
+              PHP and MySQL. With a passion for clean code and continuous
+              learning, I always strive to stay updated with the latest web
+              trends and best practices.
+            </p>
+          </div>
+          <div class="col">
+            <div class="row row-cols-1 row-cols-sm-2 g-4">
+              <div class="col d-flex flex-column gap-2">
+                <div
+                  class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                >
+                  <i class="bi bi-speedometer2"></i>
+                </div>
+                <h4 class="fw-semibold mb-0 text-body-emphasis">
+                  Work Efficiently
+                </h4>
+                <p class="text-body-secondary">
+                  I focus on writing clean, maintainable code and building
+                  fast-loading, responsive websites that offer a smooth user
+                  experience.
+                </p>
+              </div>
+              <div class="col d-flex flex-column gap-2">
+                <div
+                  class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                >
+                  <i class="bi bi-lightbulb"></i>
+                </div>
+                <h4 class="fw-semibold mb-0 text-body-emphasis">
+                  Think Creatively
+                </h4>
+                <p class="text-body-secondary">
+                  I approach problems with a creative mindset, always looking
+                  for smart, elegant solutions that enhance usability and
+                  design.
+                </p>
+              </div>
+              <div class="col d-flex flex-column gap-2">
+                <div
+                  class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                >
+                  <i class="bi bi-book"></i>
+                </div>
+                <h4 class="fw-semibold mb-0 text-body-emphasis">
+                  Learn Continuously
+                </h4>
+                <p class="text-body-secondary">
+                  The tech world evolves fast. I stay ahead by constantly
+                  learning new tools, techniques, and frameworks to grow as a
+                  developer.
+                </p>
+              </div>
+              <div class="col d-flex flex-column gap-2">
+                <div
+                  class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3"
+                >
+                  <i class="bi bi-code-slash"></i>
+                </div>
+                <h4 class="fw-semibold mb-0 text-body-emphasis">
+                  Code with Clarity
+                </h4>
+                <p class="text-body-secondary">
+                  Clean, scalable code is at the core of everything I build —
+                  making projects easier to maintain, update, and grow over
+                  time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" style="background-color: #E3FDFD">
+      <div class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 border-bottom">My Projects</h2>
+        <div class="container text-center py-5">
+          <div
+            class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 justify-content-center g-4"
+          >
+            <div class="col d-flex justify-content-center">
+              <div class="card" style="width: 18rem; background-color: #E3FDFD">
+                <img
+                  src="./images/Screenshot 2025-08-03 112957.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">RR mart</h5>
+                  <p class="card-text">
+                    RR Mart is a clean, responsive e-commerce front-end website
+                    showcasing product listings and category sections with
+                    smooth user navigation.
+                  </p>
+                  <a
+                    href="https://rakeshraja685.github.io/Rakesh/"
+                    class="btn btn-outline-dark"
+                    >Click here</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="card" style="width: 18rem; background-color: #E3FDFD">
+                <img src="./images/tindog.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">TinDog</h5>
+                  <p class="card-text">
+                    A fun, responsive single-page website inspired by
+                    Tinder, designed for dogs. Built using HTML and Bootstrap,
+                    it showcases a clean layout and mobile-friendly design.
+                  </p>
+                  <a
+                    href="https://rakeshraja685.github.io/TinDog/"
+                    class="btn btn-outline-dark"
+                    >Click here</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="card" style="width: 18rem; background-color: #E3FDFD">
+                <img
+                  src="./images/Screenshot 2025-08-03 115614.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">MBBS Abroad</h5>
+                  <p class="card-text">
+                    An informative landing page for students exploring international medical
+                    education, built with HTML, CSS, and JavaScript.
+                  </p>
+                  <a
+                    href="https://rakeshraja685.github.io/mbbs/"
+                    class="btn btn-outline-dark"
+                    >Click here</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="card" style="width: 18rem; background-color: #E3FDFD">
+                <img src="./images/piston.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">The Piston Tale</h5>
+                  <p class="card-text">
+                    A simple and responsive personal blog template built with HTML and CSS,
+                    designed for readability and minimalism, ideal for personal blogging.
+                  </p>
+                  <a
+                    href="https://rakeshraja685.github.io/Blog/"
+                    class="btn btn-outline-dark"
+                    >Click here</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="card" style="width: 18rem; background-color: #E3FDFD">
+                <img src="./images/agency.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Agency</h5>
+                  <p class="card-text">
+                    A modern, responsive landing page for a digital agency, built with HTML,
+                    CSS, and Bootstrap, including service sections and testimonials.
+                  </p>
+                  <a
+                    href="https://rakeshraja685.github.io/Agency/"
+                    class="btn btn-outline-dark"
+                    >Click here</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="card" style="width: 18rem; background-color: #E3FDFD">
+                <img src="./images/todo.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">ToDo List</h5>
+                  <p class="card-text">
+                    A lightweight, responsive task management app built using HTML, CSS,
+                    and JavaScript that allows users to add and remove tasks easily.
+                  </p>
+                  <a
+                    href="https://rakeshraja685.github.io/ToDo_List/"
+                    class="btn btn-outline-dark"
+                    >Click here</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="footer">
+      <footer class="py-3 mt-auto" style="background-color: #71C9CE;">
+        <ul class="nav justify-content-center pb-3 mb-3">
+          <li class="nav-item">
+            <a href="#header" class="nav-link px-2  text-body-secondary">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#hero" class="nav-link px-2 text-body-secondary">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#Skills" class="nav-link px-2 text-body-secondary">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link px-2 text-body-secondary">Projects</a>
+          </li>
+           <li class="nav-item">
+            <a href="#footer" class="nav-link px-2 text-body-secondary">Contact</a>
+          </li>
+        </ul>
+        <div class="text-center ">
+            <p class="mb-2 text-body-secondary">Contact: <a href="mailto:rakeshraja685@gmail.com" class="footer-link text-decoration-underline">rakeshraja685@gmail.com</a></p>
+            <p class="mb-0 text-body-secondary">© 2025 Rakesh Raja R</p>
+        </div>
+      </footer>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
