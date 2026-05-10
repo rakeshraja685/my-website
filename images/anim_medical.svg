@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+    <defs>
+        <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#b2ebf2;stop-opacity:1" />
+        </linearGradient>
+        <style>
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            @keyframes hover {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-20px); }
+            }
+            .cross { animation: spin 10s linear infinite; transform-origin: 400px 250px; }
+            .doc { animation: hover 3s ease-in-out infinite; }
+        </style>
+    </defs>
+    <!-- Background -->
+    <rect width="800" height="600" fill="#f4faff" />
+    
+    <!-- Isometric Grid -->
+    <path d="M400,480 L150,355 L400,230 L650,355 Z" fill="#e0f7fa" opacity="0.5" />
+    
+    <!-- Medical Cross -->
+    <g class="cross">
+        <path d="M370,150 L430,150 L430,220 L500,220 L500,280 L430,280 L430,350 L370,350 L370,280 L300,280 L300,220 L370,220 Z" fill="url(#grad3)" stroke="#006064" stroke-width="4" />
+    </g>
+    
+    <!-- Documents Floating -->
+    <g class="doc" style="animation-delay: 0s;" transform="translate(250, 200)">
+        <path d="M0,0 L60,-30 L100,0 L40,30 Z" fill="#006064" />
+        <path d="M0,5 L60,-25 L100,5 L40,35 Z" fill="#ffffff" stroke="#b2ebf2" stroke-width="2" />
+    </g>
+    
+    <g class="doc" style="animation-delay: 1.5s;" transform="translate(500, 300)">
+        <path d="M0,0 L60,-30 L100,0 L40,30 Z" fill="#006064" />
+        <path d="M0,5 L60,-25 L100,5 L40,35 Z" fill="#ffffff" stroke="#b2ebf2" stroke-width="2" />
+    </g>
+</svg>

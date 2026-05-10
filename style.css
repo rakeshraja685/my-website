@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+/* ── Base ── */
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* ── Glass Navbar ── */
+.glass-nav {
+  background: rgba(244, 250, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 96, 100, 0.06);
+}
+
+/* ── Mobile Menu ── */
+#mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: rgba(244, 250, 255, 0.98);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 96, 100, 0.08);
+  padding: 16px 24px 20px;
+}
+#mobile-menu.open { display: flex; }
+#mobile-menu a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111d23;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+#mobile-menu a:hover { color: #00464a; }
+
+/* ── Scroll Reveal Animations ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+/* stagger children */
+.stagger > *:nth-child(1) { transition-delay: 0.05s; }
+.stagger > *:nth-child(2) { transition-delay: 0.15s; }
+.stagger > *:nth-child(3) { transition-delay: 0.25s; }
+.stagger > *:nth-child(4) { transition-delay: 0.35s; }
+.stagger > *:nth-child(5) { transition-delay: 0.45s; }
+.stagger > *:nth-child(6) { transition-delay: 0.55s; }
+
+/* ── Hero floating orbs ── */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-24px) scale(1.04); }
+}
+@keyframes float-med {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(6deg); }
+}
+.orb-float-1 { animation: float-slow 8s ease-in-out infinite; }
+.orb-float-2 { animation: float-med 6s ease-in-out infinite 1s; }
+
+/* ── Hero badge pulse ── */
+@keyframes badge-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 70, 74, 0.3); }
+  50% { box-shadow: 0 0 0 6px rgba(0, 70, 74, 0); }
+}
+.badge-glow { animation: badge-pulse 2.5s ease-in-out infinite; }
+
+/* ── Typewriter ── */
+.line1, .line2 {
+  border-right: 2px solid #006064;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  margin: 10px auto;
+}
+.line1 {
+  animation: typewriter1 3s steps(15) 0.5s 1 normal both, blinkTextCursor 500ms infinite;
+}
+.line2 {
+  animation: typewriter2 3s steps(18) 3.8s 1 normal both, blinkTextCursor 500ms infinite;
+}
+@keyframes typewriter1 { from { width: 0; } to { width: 13ch; } }
+@keyframes typewriter2 { from { width: 0; } to { width: 18ch; } }
+@keyframes blinkTextCursor {
+  from { border-right-color: #006064; }
+  to { border-right-color: transparent; }
+}
+
+/* ── Project card hover glow ── */
+.project-card {
+  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1),
+              box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 96, 100, 0.14);
+}
+
+/* ── Skill icon bounce on hover ── */
+.skill-icon {
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.skill-icon:hover { transform: scale(1.25) rotate(-5deg); }
+
+/* ── Social icon hover ── */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0,70,74,0.2);
+  color: #00464a;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+.social-link:hover {
+  background: #00464a;
+  border-color: #00464a;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #00464a 0%, #2d666d 60%, #14696d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Section divider ── */
+.section-divider {
+  width: 56px; height: 4px;
+  background: linear-gradient(90deg, #00464a, #2d666d);
+  border-radius: 999px;
+  margin: 12px auto 0;
+}
+
+/* ── Scroll-to-top button ── */
+#scroll-top {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  width: 44px; height: 44px;
+  background: #00464a;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,70,74,0.3);
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 999;
+}
+#scroll-top.show { opacity: 1; transform: translateY(0); }
+#scroll-top:hover { background: #002021; }
+
+/* ── Active nav link indicator ── */
+.nav-active {
+  color: #00464a !important;
+  border-bottom: 2px solid #00464a;
+  padding-bottom: 2px;
+}
+
+/* ── Ticker scroll ── */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.ticker-track {
+  display: flex;
+  animation: ticker 20s linear infinite;
+  width: max-content;
+}
+.ticker-track:hover { animation-play-state: paused; }
+
+/* ── Page progress bar ── */
+#progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00464a, #2d666d, #a6eff3);
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
